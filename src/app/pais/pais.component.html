@@ -1,0 +1,47 @@
+<div class="container center">
+    <body>
+            <div class="card">
+                    <div *ngIf="Detallerecibido" class="card-header" style="text-align: center;">
+                            {{Detallerecibido.detailsNombre}}
+                            <img src="{{Detallerecibido.detailsBandera}}" alt="" style="width:50px;height:25;">
+                     </div>
+              
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li *ngIf="Detallerecibido" class="list-group-item">
+                                <i class="fas fa-globe-americas"></i>
+                                Capital: {{Detallerecibido.detailsCapital}}
+                            </li>
+                            <li *ngIf="Detallerecibido" class="list-group-item">
+                                <i class="fas fa-globe-americas"></i>
+                                Moneda: {{Detallerecibido.detailsMoneda}}
+                            </li>
+                            <li *ngIf="Detallerecibido" class="list-group-item">
+                                <i class="fas fa-globe-americas"></i>
+                                Población: {{Detallerecibido.detailsPoblacion}}
+                            </li>
+                            <li *ngIf="Detallerecibido" class="list-group-item">
+                                <i class="fas fa-globe-americas"></i>
+                                Idioma: {{Detallerecibido.detailsIdioma}}
+                            </li>
+                            <li  *ngIf="Detallerecibido" class="list-group-item">
+                                <i class="fas fa-globe-americas"></i>
+                                Region: {{Detallerecibido.detailsRegion}}
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+
+        <app-paisdetalle 
+    [nombre]="pais.nombre"
+    [moneda]="pais.moneda"
+    [poblacion]="pais.poblacion"
+    [capital]="pais.capital"
+    [idioma]="pais.idioma"
+    [region]="pais.region"
+    [bandera]="pais.bandera"
+    (DetallesPais)="getDetails($event)"
+    *ngFor="let pais of paises"
+        ></app-paisdetalle>
+    </body>
+</div>
