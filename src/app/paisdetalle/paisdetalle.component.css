@@ -1,4 +1,4 @@
-.table td {
+/* .table td {
     text-align: center;   
  }
  .table th {
@@ -9,7 +9,7 @@
  .thead{
     color: #323232;
     background: white;
- }
+ } */
 
  .card{
     border: none;
@@ -19,3 +19,9 @@
    display: flex;
    justify-content: space-between;
 }
+ .card img{
+    /* height: 200px; */
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+ }
