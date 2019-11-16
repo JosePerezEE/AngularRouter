@@ -1,4 +1,5 @@
 import { Component, OnInit,Input, EventEmitter, Output } from '@angular/core';
+import { Pais } from '../Paises';
 
 @Component({
   selector: 'app-paisdetalle',
@@ -6,15 +7,8 @@ import { Component, OnInit,Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./paisdetalle.component.css']
 })
 export class PaisdetalleComponent implements OnInit {
-    @Input() nombre : string;
-    @Input() moneda : string;
-    @Input() poblacion : string;
-    @Input() capital : string;
-    @Input() idioma : string;
-    @Input() region : string;
-    @Input() bandera : string;
- 
-  @Output() DetallesPais: EventEmitter<any> = new EventEmitter();
+    @Input('datos') pais : Pais;
+    @Output() DetallesPais: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -23,13 +17,13 @@ export class PaisdetalleComponent implements OnInit {
 
   emitDetalles(){
     let detailsCountry: any ={
-      detailsNombre : this.nombre,
-      detailsMoneda : this.moneda,
-      detailsPoblacion : this.poblacion,
-      detailsCapital : this.capital,
-      detailsIdioma : this.idioma,
-      detailsRegion : this.region,
-      detailsBandera : this.bandera
+      detailsNombre : this.pais.nombre,
+      detailsMoneda : this.pais.moneda,
+      detailsPoblacion : this.pais.poblacion,
+      detailsCapital : this.pais.capital,
+      detailsIdioma : this.pais.idioma,
+      detailsRegion : this.pais.region,
+      detailsBandera : this.pais.bandera
     }
   this.DetallesPais.emit(detailsCountry);
   }
