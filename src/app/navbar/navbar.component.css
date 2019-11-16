@@ -1,0 +1,11 @@
+.navbar{
+    background-color: white;
+}
+
+.nav-item a,.navbar-brand{
+    color:#323232;
+}
+
+ul.navbar-nav li a:hover {
+    color: #FC6E20 !important;
+}

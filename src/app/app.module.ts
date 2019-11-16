@@ -10,6 +10,8 @@ import {RouterModule,Routes,PreloadAllModules} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {RouterService} from './router.service';
 import { InformacionComponent } from './informacion/informacion.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 const rutas: Routes = [
   {path: '',component:HomeComponent},
@@ -27,7 +29,9 @@ const rutas: Routes = [
     PaisComponent,
     HomeComponent,
     PaisdetalleComponent,
-    InformacionComponent
+    InformacionComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
