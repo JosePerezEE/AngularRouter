@@ -18,16 +18,13 @@
         </tbody>
     </table> -->
 
-    <div class="row">
-        <div class="col-sm">
             <div class="card text-center">
                 <!-- <img src="{{bandera}}" class="card-img-top" alt="...">   -->
                 <div class="card-body">
-                    <h5 class="card-title">{{nombre}}</h5>
-                    <p class="card-text">Moneda: {{moneda}}</p>
+                    <h5 class="card-title">{{pais.nombre}}</h5>
+                    <img src="{{pais.bandera}}" class="card-img-top" alt="..." style="width:100px;height:50px;">
+                    <p class="card-text">Moneda: {{pais.moneda}}</p>
                     <button type="button" class="btn btn-outline-dark btn-sm" (click)="emitDetalles()">Detalles</button>
                 </div>
             </div>
-        </div>
-    </div>
 
