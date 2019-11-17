@@ -1,28 +1,9 @@
-<!-- <table class="table table-borderless">
-        <thead class="thead">
-        <tr>
-            <th scope="col">Nombre del pais</th>
-            <th scope="col">Moneda</th>
-            <th scope="col"></th>
-            <th scope="col">Bandera</th>  
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>{{nombre}}</td>
-            <td>{{moneda}}</td>
-            <td><button type="button" class="btn btn-outline-dark btn-sm" (click)="emitDetalles()">Detalles</button></td>
-            <td><img src="{{bandera}}" alt="" style="width:260px;height:220;"></td> 
-        </tr>
-        </tbody>
-    </table> -->
 
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-title">{{pais.nombre}}</h5>
-                    <img src="{{pais.bandera}}" class="card-img-top" alt="..." style="width:100px;height:50px;">
-                    <p class="card-text">Moneda: {{pais.moneda}}</p>
-                    <button type="button" class="btn btn-outline-dark btn-sm" (click)="emitDetalles()">Detalles</button>
-                </div>
-            </div>
+<div class="card text-center">
+    <div class="card-body">
+        <h5 class="card-title">{{pais.nombre}}</h5>
+        <img src="{{pais.bandera}}" class="card-img-top" alt="..." style="width:100px;height:50px;">
+        <p class="card-text"></p>
+        <button type="button" class="btn btn-outline-dark btn-sm" (click)="emitDetalles()" data-toggle="collapse" data-target="#collapseDetalle" >Detalles</button>
+    </div>
+</div>
