@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Pais} from '../Paises';
 import {RouterService} from '../router.service';
+declare var $: any;
 
 @Component({
   selector: 'app-pais',
@@ -8,6 +9,7 @@ import {RouterService} from '../router.service';
   styleUrls: ['./pais.component.css']
 })
 export class PaisComponent implements OnInit {
+  
   pais;
   title : string = "Lista de paises";
   paisnuevo : Pais;
@@ -23,6 +25,7 @@ export class PaisComponent implements OnInit {
     this.paises.push(new Pais('Guatemala','Quetzal','16,176,133','Guatemala City','Español','Centroamérica ','https://restcountries.eu/data/gtm.svg'));
     this.paises.push(new Pais('El Salvador','Dolar','6,520,675','San Salvador','Español','Centroamérica ','https://restcountries.eu/data/slv.svg'));
     this.paises.push(new Pais('Panama','Balboa','3,814,672','Panama City','Español','Centroamérica ','https://restcountries.eu/data/pan.svg'));      
+
   }
   
   guardar(){
@@ -31,15 +34,7 @@ export class PaisComponent implements OnInit {
       window.alert("Se agrego exitosamente a su lista de paises");
   }
 
-  Detallerecibido; //any = {
-    //detailsNombre : '',
-    //detailsMoneda : '',
-   // detailspoblacion : '',
-    //detailscapital : '',
-    //detailsidioma : '',
-    //detailsregion : '',
-    //detailsbandera : ''
- // };
+  Detallerecibido;
   public getDetails(data:any): void{
     this.Detallerecibido = data;
   }

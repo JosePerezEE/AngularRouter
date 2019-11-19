@@ -1,5 +1,6 @@
 import { Component, OnInit,Input, EventEmitter, Output } from '@angular/core';
 import { Pais } from '../Paises';
+declare var $: any;
 
 @Component({
   selector: 'app-paisdetalle',
@@ -13,6 +14,10 @@ export class PaisdetalleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(){
+    $('#collapseDetalle').on('hide.bs.collapse', function (e) {
+      e.preventDefault();
+    });
+    
   }
 
   emitDetalles(){

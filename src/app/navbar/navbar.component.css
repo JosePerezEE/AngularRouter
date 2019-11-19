@@ -3,9 +3,9 @@
 }
 
 .nav-item a,.navbar-brand{
-    color:#323232;
+    color:#2a2c41;
 }
 
 ul.navbar-nav li a:hover {
-    color: #FC6E20 !important;
+    color: gray !important;
 }

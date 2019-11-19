@@ -12,13 +12,15 @@ import {RouterService} from './router.service';
 import { InformacionComponent } from './informacion/informacion.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { BanderasComponent } from './banderas/banderas.component';
 
 const rutas: Routes = [
   {path: '',component:HomeComponent},
   {path: 'pais',component: PaisComponent},
   {path: 'paises',component: PaisComponent},
   {path: 'paisdetalle',component: PaisdetalleComponent},
-  {path: 'informacion',component: InformacionComponent}
+  {path: 'informacion',component: InformacionComponent},
+  {path: 'banderas',component: BanderasComponent}
 
   
   ]
@@ -31,7 +33,8 @@ const rutas: Routes = [
     PaisdetalleComponent,
     InformacionComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    BanderasComponent
   ],
   imports: [
     BrowserModule,
