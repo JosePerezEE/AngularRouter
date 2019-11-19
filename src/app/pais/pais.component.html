@@ -1,12 +1,15 @@
-<div class="container center">
+<div style="text-align: center;">
+        <label style="text-align: center;" for=""><h1>Lista de países centroamericanos</h1></label>
+</div>
+<div class="container center" >
     <body>
-            <div class="card" id="collapseDetalle">
+            <div class="card collapse" id="collapseDetalle">
                     <div *ngIf="Detallerecibido" class="card-header" style="text-align: center;">
-                            {{Detallerecibido.detailsNombre}}
+                            {{Detallerecibido.detailsNombre}} &nbsp;
                             <img src="{{Detallerecibido.detailsBandera}}" alt="" style="width:50px;height:25;">
                      </div>
               
-                    <div class="card-body">
+                    <div class="card-body" >
                         <ul class="list-group list-group-flush">
                             <li *ngIf="Detallerecibido" class="list-group-item">
                                 <i class="fas fa-globe-americas"></i>
